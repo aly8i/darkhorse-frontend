@@ -1,0 +1,19 @@
+
+.content {
+  margin-bottom: 4em;
+  font-size: large;
+}
+.content p {
+  display: inline;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
+}
+
+.v2 p {
+  background-position: left;
+  background-size: 0% 100%;
+  background-image: linear-gradient(gray, black);
+}
+.v2:hover p {
+  background-size: 100% 100%;
+}

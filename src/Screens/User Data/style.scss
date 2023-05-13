@@ -1,0 +1,13 @@
+@import '../../styles/mixins/dimensions';
+.user-card {
+  @include w-45;
+}
+.w-50 {
+  @include w-50;
+}
+
+/* .btn-wrapper {
+width: 80%;
+margin: 0 auto;
+margin-top: 100px;
+} */

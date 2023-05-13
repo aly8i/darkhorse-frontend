@@ -1,0 +1,233 @@
+@import '../../styles/variables/typography';
+
+.fw-normal {
+  font-weight: 300 !important;
+}
+.overview-title {
+  margin-right: 80px;
+  font-size: var(--Font-30);
+  font-weight: bold;
+}
+.overview-text {
+  font-size: $font-25;
+}
+
+.financlial-list {
+  font-size: var(--Font-30);
+}
+
+.financlial-wrapper h3 {
+ 
+}
+.financlial-wrapper ul {
+  font-weight: 400;
+  margin: 40px 0;
+ // margin-left: 60px;
+}
+
+.above-wrraper {
+  text-align: center;
+}
+
+.above-wrraper h2 {
+ 
+}
+
+.above-wrraper h6 {
+ 
+}
+.end-wrapper h2 {
+  margin-bottom: 70px;
+}
+
+@media only screen and (max-width: 900px) {
+  .above-wrraper h2 {
+    width: 85%;
+    font-size: 60px;
+  }
+
+  .financlial-list {
+    font-size: $font-25;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overview-wrapper {
+    flex-direction: column;
+  }
+  .above-wrraper h2 {
+    width: 100%;
+   // font-size: $font-50;
+  }
+
+  /* .overview-title {
+    margin-bottom: 1em;
+  } */
+  .fs-30,
+  .financlial-list {
+    font-size: $font-20;
+  }
+  .financlial-wrapper ul {
+    //margin-left: 30px;
+  }
+
+  .financlial-wrapper h3 {
+    margin-bottom: 20px;
+  }
+  .overview-text {
+   // font-size: $font-20;
+  }
+}
+.finaclinalParam{
+width: 450px;
+line-height: 60px;
+max-width:100%;
+}
+.financlial-wrapper ul.financlial-list{
+  margin-left: 0;
+  list-style: none;
+  padding-left: 25px;
+  li{
+    position: relative;
+    margin-bottom: 7px;
+    &:nth-child(1){
+      span{
+        border-bottom: 1px solid #636363;
+      }
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: -15px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #000;
+      @media only screen and (max-width: 600px) {
+      top: 8px;
+       }
+    }
+  }
+}
+.dark-mode{
+  .financlial-wrapper ul.financlial-list li::before{
+    background-color: #fff;
+  }
+}
+.didureally{
+  margin-top: 300px;
+  width: 859px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 90px;
+  max-width: 100%;
+  @media only screen and (max-width:1024px) {
+   
+    width: 600px;
+
+    line-height: 60px;
+    
+   }
+   @media only screen and (max-width:600px) {
+   
+    width: 340px !important;
+    line-height: 40px;
+    margin-bottom: 50px !important;
+    
+   }
+}
+.well-load{
+  margin: 150px 0;
+  &.mobile{
+    display: none;
+    @media only screen and (max-width:600px) {
+   
+      display: block;
+      margin-top: 0;
+      text-align: center;
+      max-width: 300px;
+      margin: auto;
+      
+     }
+  }
+
+  @media only screen and (max-width:600px) {
+   
+    display: none;
+    
+   }
+
+ 
+  
+}
+.section-img-container.philosohphy{
+width: 1000px;
+max-width: 90%;
+height: 500px;
+margin-top: 300px;
+margin-bottom: 300px;
+@media only screen and (max-width:600px) {
+  width: 100% !important;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  margin-top: 200px;
+ }
+}
+.realthings{
+  max-width: 700px;
+  line-height: 70px;
+  margin: 0 !important;
+  margin-bottom: 50px !important;
+  @media only screen and (max-width:1024px) {
+   
+    max-width: 500px;
+    line-height: 50px;
+      
+     }
+  @media only screen and (max-width:600px) {
+   max-width: 300px;
+   line-height: 40px;
+     
+    }
+}
+.financlial-wrapper .financlial-list.philosophylist{
+padding-left: 50px;
+width: 80%;
+@media only screen and (max-width:600px) {
+padding-left: 20px;
+width: 90%;
+ }
+
+}
+.abovementioned{
+  margin-bottom: 200px;
+  @media only screen and (max-width:600px) {
+    margin-bottom: 100px;
+   }
+}
+
+.ifwould{
+  br{
+    display: none;
+  }
+  @media only screen and (max-width:1080px) {
+   
+   width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 100%;
+    
+   }
+   @media only screen and (max-width:600px) {
+   
+    width: 75%;;
+     
+    }
+    @media only screen and (max-width:500px) {
+   
+      width: 100%;;
+       
+      }
+}

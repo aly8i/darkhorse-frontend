@@ -1,0 +1,227 @@
+@import '../../styles/mixins/dimensions';
+.home-hero-text {
+  text-transform: capitalize;
+}
+
+.section-img-container {
+  margin: 0 auto;
+  object-fit: cover;
+  display: flex;
+  
+}
+.home-container {
+  width: 85%;
+  margin: 0 auto;
+  @media only screen and (max-width:500px) {
+    
+     width: 80%;
+    }
+}
+.w-90 {
+  @include w-90;
+}
+.sector-img {
+  width: 22%;
+  height: 238px;
+}
+
+.sector-contariner {
+  margin: 200px 0;
+}
+.sector-title {
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+.view-more {
+  height: 468px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  margin-top: 50px;
+}
+.home-card-text {
+  color: #636363;
+  margin: 15px 0;
+  font-family: "Averta CY";
+  font-weight: 300;
+  
+  line-height: normal !important;
+  width: 600px;
+  max-width : 100%;
+  @media only screen and (max-width: 992px) {
+   font-size: 16px;
+  }
+}
+.section-img-container{
+  @media only screen and (max-width: 992px) {
+    width: 380px;
+   }
+  
+}
+.card-img-container{
+  @media only screen and (max-width: 835px) {
+    flex-direction: column;
+    >div{
+    width: 100% !important;
+    &:nth-child(2){
+      align-items: flex-start;
+      height: auto;
+    }
+    }
+  }
+
+ 
+}
+.header-mb {
+  margin-bottom: 70px;
+}
+.card-content.w-40{
+  @media only screen and (max-width: 901px) {
+    width: 45%;
+   }
+}
+
+
+.arrow-icon {
+  width: 70px !important;
+  height: 70px !important;
+}
+.price-wrapper{
+  justify-content: left !important;
+  //font-family: 'Poppins', sans-serif;
+  >div{
+    //font-family: AvertaReg;
+    font-size: 18px;
+    color: #000;
+    margin-left: 5px !important;
+    font-weight: 500 !important;
+    *{
+      font-weight: 500 !important;
+    }
+    &:nth-child(2){
+      margin-left: 0 !important;
+      *{
+        font-weight: 500 !important;
+      }
+    }
+  }
+  >p{
+    font-size: 16px;
+  }
+  
+  @media only screen and (max-width: 992px) {
+   justify-content: flex-start;
+   
+   }
+   @media only screen and (max-width: 835px) {
+    width: auto !important;
+    margin-left: 10px !important;
+    
+    }
+
+  
+
+}
+
+@media only screen and (max-width: 900px) {
+  .sector-wrapper {
+    flex-wrap: wrap;
+  }
+  .sector-img {
+    width: 33%;
+  }
+  .section-img-container {
+  //  @include w-100;
+  }
+  .arrow-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+@media only screen and (max-width: 769px) {
+  
+  .card-img-container{
+    flex-direction: column;
+  }
+  .card-content.w-40{
+    width: 100%;
+  }
+  .section-img-container{
+    width: 100%;
+    align-items: flex-start;
+  }
+ }
+
+
+@media only screen and (max-width: 600px) {
+  .sector-img {
+    @include w-50;
+  }
+  .arrow-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+.slick-arrow.slick-prev {
+  display: none !important;
+}
+
+.mt-section .mt-section-title {
+  @include w-90;
+  font-family: "Averta CY" !important;
+  font-weight: 600;
+  color: #000;
+  padding-left: 120px;
+  padding-bottom: 50px;
+  font-size: 65px;
+  @media only screen and (max-width: 1200px) {
+    //  padding-left: 80px !important;
+      font-size: 40px;
+     
+      padding-left: 50px;
+      padding-bottom: 30px;
+    }
+    @media only screen and (max-width: 1024px) {
+      //  padding-left: 80px !important;
+        font-size: 30px;
+        padding-left: 20px;
+      }
+}
+.ticker-view {
+  @media only screen and (max-width:768px) {
+
+    margin-left: 15px;
+    width: auto !important;
+    
+    }
+}
+//Slider Continer Slick 
+
+.sliderContainer{
+  .slick-track{
+    >div{
+      .card-content {
+        margin-top: 20px;
+      }
+      .card-text{
+        margin: 0;
+        margin-top: 15px;
+      }
+      .ticker-view {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .price-wrapper{
+        font-weight: 300 !important;
+        *{
+          font-weight: 300 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../styles/mixins/dimensions';
+@import '../../styles/mixins/spacing';
+
+.home-border {
+  border-bottom: 1px solid;
+  width: fit-content;
+}
+
+.home-text {
+  width: 80%;
+}
+.light-mode .cxx{
+  color: black !important;
+}
+.ml-4 {
+  margin-right: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+  .home-text {
+    @include w-100;
+  }
+  .mb-30 {
+    @include mb-30;
+  }
+}

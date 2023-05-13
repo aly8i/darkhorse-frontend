@@ -1,0 +1,124 @@
+@import '../../styles/mixins/dimensions';
+@import '../../styles/mixins/flex';
+
+.Overview-Categories {
+  /*
+  font-size: 25px;
+  line-height: 25px;
+  */
+}
+.Overview-Categories p:first-child {
+  /*
+  margin-right: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  */
+}
+
+.categories-title {
+  /*
+  font-weight: bold;
+  font-size: 60px;
+  margin: 150px 0;
+  */
+}
+.mt-3 {
+  margin-top: 3em;
+}
+
+.mb-3 {
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+  .card-container {
+   // @include w-90;
+  }
+
+  .flex-column-tablet {
+ //   @include flex-direction-column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Overview-Categories {
+  //  @include flex-direction-column;
+  }
+
+  .Overview-Categories {
+  //  font-size: 20px;
+  }
+}
+.group-categorey-sections{
+
+}
+
+.group-categorey-sections{
+  >div{
+    margin-bottom: 200px;
+    h2{
+      margin-bottom: 50px !important;
+      @media only screen and (max-width: 600px){
+         
+        margin-bottom: 30px !important;
+   }
+
+      &~p{
+        width: 80%;
+        margin-bottom: 50px !important;
+        
+        @media only screen and (max-width: 1024px){
+             width: 100%;
+             line-height: 32px !important;
+        }
+        @media only screen and (max-width: 600px){
+         
+          line-height: 25px !important;
+          margin-bottom: 15px !important;
+     }
+
+      }
+    }
+    button{
+      margin-bottom: 0 !important;
+    }
+  }
+}
+.holdingcompanytitle  {
+  max-width: 300px;
+  line-height: 102px;
+  @media only screen and (max-width: 600px){
+    max-width: 200px;
+}
+  @media only screen and (max-width: 1024px){
+    line-height: 75px;
+}
+@media only screen and (max-width: 600px){
+  line-height: 42px;
+}
+  .text-slide-up-animation-wrapper-3,.text-slide-up-animation-content-3,.text-slide-up-animation-text-3{
+       line-height: 102px;
+       @media only screen and (max-width: 1024px){
+        line-height: 75px;
+   }
+   @media only screen and (max-width: 600px){
+    line-height: 42px;
+}
+
+  }
+  >span{
+  &:nth-child(2){
+    span{
+      span{
+        position: relative;
+        top: -30px;
+        @media only screen and (max-width: 600px){
+          top: 0;
+     }
+
+      }
+    }
+  }
+  }
+  
+}

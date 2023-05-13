@@ -1,0 +1,43 @@
+@import '../../styles/variables/typography';
+.blog-container {
+  height: 90vh;
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-footer-text {
+  margin-top: 30px;
+}
+
+.blog-contact {
+  width: 40%;
+}
+
+.fs-20 {
+  font-size: var(--Font-20);
+}
+
+.footer-social {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+  margin: auto;
+}
+
+.blog-footer-list {
+  list-style: none;
+}
+
+.light-mode .blog-footer-list a {
+  color: var(--Colour-2);
+}
+
+.dark-mode .blog-footer-list a {
+  color: var(--Colour-1);
+}

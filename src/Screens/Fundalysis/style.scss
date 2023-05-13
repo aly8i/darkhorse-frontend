@@ -1,0 +1,41 @@
+@import '../../styles/mixins/spacing';
+@import '../../styles/mixins/flex';
+@import '../../styles/mixins/dimensions';
+
+.dashbord-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dashbord-btn {
+  @include mt-30;
+}
+
+.feature-section {
+  @include justify-content-between;
+}
+
+.dashbord-img {
+  @include justify-content-between;
+}
+
+.dashbord-img .first-img img {
+  @include w-100;
+}
+
+.dashbord-img .secend-img img {
+  margin-top: 100px;
+  width: 100%;
+}
+.end-secend {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+}
+
+@media only screen and (max-width: 600px) {
+  .dashbord-img .secend-img img {
+    @include mt-30;
+  }
+}

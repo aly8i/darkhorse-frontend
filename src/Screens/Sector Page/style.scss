@@ -1,0 +1,16 @@
+@import '../../styles/mixins/flex';
+
+.Overview-Information {
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .Overview-Information {
+    @include flex-column;
+  }
+  .Overview-Information p:last-child {
+    margin-top: 20px;
+    font-size: 20px !important;
+  }
+}

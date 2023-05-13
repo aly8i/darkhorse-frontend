@@ -1,0 +1,263 @@
+.myChart-wrapper {
+  margin-top: 1.2rem;
+
+  --clr-company-stock: hsl(233, 100%, 66%);
+  --clr-index-stock: hsl(165, 100%, 41%);
+}
+.myChart-price {
+  display: flex;
+}
+
+.myChart-infoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.myChart-info {
+  margin-bottom: 0.6rem;
+}
+.myChart-infoCompany {
+  border-left: 0.25rem solid var(--clr-company-stock);
+  padding-left: 0.4rem;
+  border-radius: 0.25rem;
+}
+.myChart-infoCompany .myChart-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  color: rgb(102, 109, 129);
+  margin: 0;
+}
+.myChart-infoCompany .myChart-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  /* color: hsl(231, 17%, 16%); */
+  margin: 0;
+  margin-top: 0.2rem;
+}
+
+.myChart-infoIndex {
+  display: flex;
+  align-items: baseline;
+  gap: 0.1rem;
+
+  margin-top: 0.4rem;
+  border-left: 0.25rem solid var(--clr-index-stock);
+  padding-left: 0.4rem;
+  border-radius: 0.25rem;
+}
+.myChart-infoIndex .myChart-label {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: rgb(164, 174, 201);
+  margin: 0;
+
+  display: flex;
+  gap: 0.1rem;
+
+  min-width: 4ch;
+}
+.myChart-infoIndex .myChart-price {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: hsl(224, 26%, 72%);
+  margin: 0;
+}
+
+.myChart-lineChartWrapper {
+  position: relative;
+  margin: auto;
+  height: 13.125rem;
+  width: 100%;
+}
+.myChart-lineChartWrapper > canvas {
+  cursor: crosshair;
+}
+
+.myChart-barChartWrapper {
+  position: relative;
+  margin: auto;
+  height: 2rem;
+  width: 100%;
+
+  --idealBarHeight: 4rem;
+  --offsetY: 2rem;
+  height: calc(var(--idealBarHeight) + var(--offsetY));
+  margin-top: calc(-1 * var(--offsetY));
+}
+.myChart-barChartWrapper > canvas {
+  cursor: crosshair;
+}
+
+/* Number Animation related styles */
+.light-mode .myChart-infoCompany .ticker-view {
+  --clr-number: hsl(231, 17%, 16%);
+  --clr-number-from: hsl(231, 17%, 16%);
+  width: unset;
+}
+.light-mode .myChart-infoIndex .ticker-view {
+  --clr-number: hsl(224, 26%, 72%);
+  --clr-number-from: hsl(224, 26%, 72%);
+  width: unset;
+}
+
+/* Dropdown menu related styles */
+.ant-select {
+  border: 1px solid hsl(247, 44%, 92%) !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  outline: none !important;
+}
+.ant-select-selection-placeholder {
+  letter-spacing: 0.02em !important;
+  color: hsl(234, 22%, 25%) !important;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: none !important;
+}
+.ant-select-dropdown {
+  margin-top: 0.4rem !important;
+  padding: 0.4rem !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+  border: 1px solid hsl(247, 44%, 92%) !important;
+}
+.ant-select-item-option {
+  letter-spacing: 0.02em;
+  color: hsl(233, 4%, 37%) !important;
+  background-color: hsl(0, 0%, 100%) !important;
+  border-radius: 2px !important;
+  font-size: 0.8rem !important;
+  transition: none !important;
+}
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  color: hsl(231, 25%, 11%) !important;
+  background-color: hsl(252, 42%, 95%) !important;
+}
+
+.dark-mode .ant-select {
+  border-color: hsl(240, 12%, 17%) !important;
+}
+.dark-mode .ant-select-selection-placeholder {
+  color: hsl(248, 11%, 40%) !important;
+}
+.dark-mode .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  color: hsl(240, 20%, 63%) !important;
+  background-color: hsl(240, 12%, 17%) !important;
+}
+.dark-mode .ant-select-dropdown {
+  background-color: hsl(240, 12%, 17%) !important;
+  border-color: hsl(240, 36%, 64%) !important;
+}
+.dark-mode .ant-select-item-option {
+  background-color: transparent !important;
+  color: hsl(240, 20%, 63%) !important;
+}
+.dark-mode .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: hsl(240, 19%, 33%) !important;
+  color: hsl(240, 63%, 75%) !important;
+}
+.dark-mode .ant-select-arrow svg {
+  fill: hsl(240, 20%, 63%) !important;
+}
+
+/* Timeline related styles */
+.ant-tabs-nav-list {
+  transition: none !important;
+  display: flex !important;
+  gap: 1rem !important;
+}
+.ant-tabs {
+  margin: 0 !important;
+  margin-top: 0.5rem !important;
+}
+.ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 !important;
+}
+.ant-tabs-nav {
+  margin: 0 !important;
+  margin-bottom: 0.4rem;
+}
+.ant-tabs-tab {
+  font-size: 0.8rem !important;
+  padding: 0.5rem !important;
+  color: hsl(226, 8%, 32%) !important;
+  letter-spacing: 0.02em !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  text-shadow: none !important;
+  color: hsl(251, 40%, 27%) !important;
+  font-weight: bolder;
+}
+.ant-tabs-ink-bar {
+  background: hsl(251, 40%, 27%) !important;
+}
+
+.dark-mode .ant-tabs-tab {
+  color: hsl(240, 15%, 53%) !important;
+}
+.dark-mode .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: hsl(232, 81%, 79%) !important;
+}
+.dark-mode .ant-tabs-ink-bar {
+  background: hsl(232, 81%, 79%) !important;
+}
+.dark-mode .ant-tabs-bottom > .ant-tabs-nav:before,
+.dark-mode .ant-tabs-bottom > div > .ant-tabs-nav:before,
+.dark-mode .ant-tabs-top > .ant-tabs-nav:before,
+.dark-mode .ant-tabs-top > div > .ant-tabs-nav:before {
+  border-color: hsl(240, 10%, 42%) !important;
+}
+
+/* Min-width media queries start here */
+@media screen and (min-width: 600px) {
+  .myChart-info {
+    margin-bottom: 1rem;
+  }
+
+  .myChart-infoCompany .myChart-label {
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+  .myChart-infoCompany .myChart-price {
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-top: 0.4rem;
+  }
+
+  .myChart-infoIndex {
+    gap: 0.2rem;
+
+    margin-top: 0.6rem;
+  }
+  .myChart-infoIndex .myChart-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    gap: 0.2rem;
+  }
+  .myChart-infoIndex .myChart-price {
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 900px) {
+}
+@media screen and (min-width: 1200px) {
+  .myChart-lineChartWrapper {
+    height: 21.875rem;
+  }
+  .myChart-barChartWrapper {
+    --idealBarHeight: 5rem;
+    --offsetY: 4rem;
+  }
+}

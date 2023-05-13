@@ -1,0 +1,33 @@
+@mixin slider-arrow-left {
+  margin-right: 11px;
+  cursor: pointer;
+}
+
+@mixin slider-arrow-right {
+  /* margin-right: 100px; */
+  cursor: pointer;
+}
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin underline {
+  text-decoration: underline !important;
+}
+
+@mixin strong {
+  font-family: AvertaSemi !important;
+}
+
+@mixin stroked {
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+@mixin text-red {
+  color: #e85c7a;
+}
+
+@mixin text-green {
+  color: rgb(47, 164, 47);
+}

@@ -1,0 +1,10 @@
+@import '../../styles/mixins/spacing';
+
+.filter-wrapper {
+  @include m-auto;
+}
+
+.filter-item {
+  font-family: AvertaSemi;
+  font-weight: 700;
+}

@@ -1,0 +1,45 @@
+// Overview Content mixin
+@mixin overview-content {
+  width: 60%;
+  margin: 0 auto;
+}
+
+// Display Flex mixin
+@mixin d-flex {
+  display: flex;
+}
+
+// Flex direction column mixin
+@mixin flex-column {
+  flex-direction: column;
+}
+
+// Flex wrap mixin
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+
+// Flex direction column mixin
+@mixin flex-direction-column {
+  flex-direction: column;
+}
+
+// Justify content space-between mixin
+@mixin justify-content-between {
+  justify-content: space-between;
+}
+
+// Justify content center mixin
+@mixin justify-content-center {
+  justify-content: center;
+}
+
+// Align items center mixin
+@mixin align-items-center {
+  align-items: center;
+}
+
+// Align items flex-end mixin
+@mixin align-items-end {
+  align-items: flex-end;
+}

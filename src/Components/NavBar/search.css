@@ -1,0 +1,91 @@
+.wrapper5{
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.light-mode .dropOpen1{
+    background-color: #e3e0e0f0;
+}
+.light-mode .drop1{
+    background-color: #e3e0e0f0;
+}
+
+.search{
+    position: absolute;
+    right: 100px;
+    top:200px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: black;
+    padding: 18px 20px;
+    margin: 0;
+    stroke-width: 30px;
+    border-radius: 50%;
+    font-size: 1px;
+    cursor: pointer;
+}
+
+
+
+.drop1{
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.986);
+    height: 0px;
+    flex-direction: column;
+    width: 100%;    
+    right: 0;
+    left:0;
+    position: fixed;
+    top:0px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1)1s;
+    overflow: hidden;
+}
+
+.xxplaceholder::placeholder{
+    color: gray !important;;
+}
+
+.xxplaceholder:focus::placeholder {
+    color: transparent !important;
+  }
+
+.dropOpen1{
+    z-index: 40;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    top:0px;
+    right: 0;
+    left:0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.986);
+    height: calc(100vh);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1)2s;
+}
+.backwrapper{
+    position: relative;
+    left: 100px;
+
+    top:-100px;
+    border: none;
+    padding: 18px 20px;
+    margin: 0;
+    border-radius: 50%;
+    font-size: 1px;
+}
+
+.search-input{
+    max-width: 300px;
+    height:50px;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+}

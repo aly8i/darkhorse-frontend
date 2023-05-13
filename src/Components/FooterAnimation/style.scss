@@ -1,0 +1,375 @@
+/* Footer-animation related styles */
+.footer-animation-wrapper {
+  position: relative;
+  padding-top: 4rem;
+  pointer-events: none;
+  
+}
+
+/* Horse */
+.horseRunningSprite-wrapper {
+  --fullImgWidth: 3500px;
+  --horseImgWidth: 109.38px;
+  --horseImgHeight: 67.77px;
+
+  position: absolute;
+  bottom: 0;
+  width: var(--horseImgWidth);
+  height: var(--horseImgHeight);
+  /* margin-left: -8.07%; */
+  z-index: 5;
+  transition: transform 0s linear,-webkit-transform 0s linear;
+}
+
+.horseRunningSprite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../Assets/horse-running-sprite-png.png');
+  background-color: transparent;
+  background-size: var(--fullImgWidth) var(--horseImgHeight);
+  background-position: 0 center;
+  animation: horseRunning 650ms steps(32) infinite;
+}
+
+/* Sun & Moon */
+.sun-and-moon {
+  position: absolute;
+  top: -180%;
+  width: 100vw;
+  height: 50rem;
+  margin-left: calc(13vw / -2);
+  overflow-y: hidden;
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  width: 30rem;
+  height: 40rem;
+  top: 25%;
+  right: 18%;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  transform: rotate(90deg);
+}
+.sun svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25rem;
+  height: 25rem;
+}
+
+/* Moon */
+.moon {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  left: 30%;
+  bottom: -12%;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  transform: rotate(90deg);
+}
+.moon {
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+/* Mountains */
+
+.mountains {
+  position: relative;
+  display: block;
+  width: 100vw;
+  margin-left: calc(13vw / -2);
+  height: 18.4375rem;
+  top: 7px;
+  z-index: 1;
+}
+
+.mountains > * {
+  position: absolute;
+  display: block;
+  width: 6000px;
+  height: 18.4375rem;
+  left: 0;
+}
+
+.far-mountains {
+  bottom: 4rem;
+  z-index: 2;
+
+  --slideLeftSpeed: 60s;
+  --slideLeftStart: 0px;
+  --slideLeftDistance: -3000px;
+}
+.far-mountains svg {
+  animation: slideLeft var(--slideLeftSpeed) linear infinite;
+}
+.dark-mode {
+  .far-mountains {
+    --farMountainsGradientTop1: rgba(27, 26, 35, 1);
+    --farMountainsGradientTop2: rgba(28, 27, 36, 1);
+    --farMountainsGradientMiddle: rgba(34, 33, 43, 1);
+    --farMountainsGradientBottom: rgba(36, 35, 45, 1);
+
+    --farMountainsShadowsColor: rgba(24, 23, 31, 1);
+
+    --farMountainsTreesColor: rgba(22, 21, 30, 1);
+
+    --farMountainsLinesColor: rgba(22, 21, 30, 1);
+  }
+}
+.light-mode {
+  .far-mountains {
+    --farMountainsGradientTop1: rgba(217, 217, 217, 1);
+    --farMountainsGradientTop2: rgba(217, 217, 217, 1);
+    --farMountainsGradientMiddle: rgba(255, 255, 255, 1);
+    --farMountainsGradientBottom: rgba(255, 255, 255, 1);
+
+    --farMountainsShadowsColor: rgba(225, 225, 225, 1);
+
+    --farMountainsTreesColor: rgba(198, 198, 198, 1);
+
+    --farMountainsLinesColor: rgba(198, 198, 198, 1);
+  }
+}
+
+.shade-back-far {
+  z-index: 1;
+  bottom: 14rem;
+}
+.dark-mode {
+  .shade-back-far {
+    --shadeBackFarGradientTop: rgba(36, 35, 44, 0);
+    --shadeBackFarGradientMiddle: rgba(117, 117, 122, 0.15);
+    --shadeBackFarGradientBottom: rgba(255, 255, 255, 0.4);
+  }
+}
+.light-mode {
+  .shade-back-far {
+    --shadeBackFarGradientTop: rgba(36, 35, 44, 0);
+    --shadeBackFarGradientMiddle: rgba(117, 117, 122, 0.15);
+    --shadeBackFarGradientBottom: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.shade-back-near {
+  z-index: 3;
+  bottom: 0;
+}
+.dark-mode {
+  .shade-back-near {
+    --shadeBackFarGradientTop: rgba(36, 35, 44, 0);
+    --shadeBackFarGradientMiddle: rgba(117, 117, 122, 0.15);
+    --shadeBackFarGradientBottom: rgba(255, 255, 255, 0.4);
+  }
+}
+.light-mode {
+  .shade-back-near {
+    --shadeBackNearGradientTop: rgba(36, 35, 44, 0);
+    --shadeBackNearGradientMiddle: rgba(117, 117, 122, 0.6);
+    --shadeBackNearGradientBottom: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.near-mountains {
+  bottom: 0;
+  z-index: 4;
+
+  --slideLeftSpeed: 40s;
+  --slideLeftStart: 0px;
+  --slideLeftDistance: -3000px;
+}
+.near-mountains svg {
+  animation: slideLeft var(--slideLeftSpeed) linear infinite;
+}
+.dark-mode {
+  .near-mountains {
+    --nearMountainsGradientTop: rgba(36, 35, 44, 1);
+    --nearMountainsGradientMiddle: rgba(26, 25, 34, 1);
+    --nearMountainsGradientBottom: rgba(17, 16, 25, 1);
+
+    --nearMountainsShadowsGradientTop1: rgba(27, 26, 35, 1);
+    --nearMountainsShadowsGradientTop2: rgba(28, 27, 36, 1);
+    --nearMountainsShadowsGradientMiddle: rgba(34, 33, 43, 1);
+    --nearMountainsShadowsGradientBottom: rgba(36, 35, 45, 1);
+  }
+}
+.light-mode {
+  .near-mountains {
+    --nearMountainsGradientTop: rgba(255, 255, 255, 1);
+    --nearMountainsGradientMiddle: rgba(255, 255, 255, 1);
+    --nearMountainsGradientBottom: rgba(255, 255, 255, 1);
+
+    --nearMountainsShadowsGradientTop1: rgba(237, 237, 237, 1);
+    --nearMountainsShadowsGradientTop2: rgba(237, 237, 237, 1);
+    --nearMountainsShadowsGradientMiddle: rgba(237, 237, 237, 1);
+    --nearMountainsShadowsGradientBottom: rgba(237, 237, 237, 1);
+  }
+}
+
+.trees {
+  bottom: 0;
+  z-index: 5;
+
+  --slideLeftSpeed: 30s;
+  --slideLeftStart: 0px;
+  --slideLeftDistance: -3000px;
+}
+.trees svg {
+  animation: slideLeft var(--slideLeftSpeed) linear infinite;
+}
+.dark-mode {
+  .trees {
+    --treesOnlyLeftColor: rgba(234, 234, 234, 1);
+    --treesOnlyRightColor: rgba(225, 225, 225, 1);
+
+    --treesOnlyOpacity: 0.05;
+  }
+}
+.light-mode {
+  .trees {
+    --treesOnlyLeftColor: rgba(234, 234, 234, 1);
+    --treesOnlyRightColor: rgba(225, 225, 225, 1);
+
+    --treesOnlyOpacity: 1;
+  }
+}
+
+.shade-front {
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  z-index: 6;
+  background-color: var(--bgShadeFrontClr);
+  -webkit-box-shadow: 0 0 4rem 2rem var(--bgShadeFrontBoxShadowClr);
+  box-shadow: 0 0 4rem 2rem var(--bgShadeFrontBoxShadowClr);
+}
+
+.dark-mode {
+  .shade-front {
+    --bgShadeFrontClr: rgba(0, 0, 0, 1);
+    --bgShadeFrontBoxShadowClr: rgba(0, 0, 0, 1);
+  }
+}
+.light-mode {
+  .shade-front {
+    --bgShadeFrontClr: rgba(255, 255, 255, 1);
+    --bgShadeFrontBoxShadowClr: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Keyframes */
+
+@keyframes horseRunning {
+  to {
+    background-position: calc(-1 * var(--fullImgWidth)) center;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(var(--slideLeftStart));
+  }
+  to {
+    transform: translateX(var(--slideLeftDistance));
+  }
+}
+
+/* Media queries */
+
+/* Min width media queries */
+/* Note - Put small width media queries first (applicable for only 'min-width' media queries) */
+@media screen and (min-width: 1200px) {
+  .horseRunningSprite-wrapper {
+    --fullImgWidth: 4000px;
+    --horseImgWidth: 125px;
+    --horseImgHeight: 77.46px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* .horseRunningSprite-wrapper {
+    --fullImgWidth: 6000px;
+    --horseImgWidth: 187.5px;
+    --horseImgHeight: 116.18px;
+  } */
+}
+
+/* Max width media queries */
+/* Note - Put large width media queries first (applicable for only 'max-width' media queries) */
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 992px) {
+  .sun {
+    right: 0;
+  }
+  .sun svg {
+    width: 22rem;
+    height: 22rem;
+  }
+
+  .moon {
+    left: -10%;
+    bottom: -20%;
+  }
+  .moon svg {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Sun and moon */
+  .sun-and-moon {
+    display: none;
+  }
+
+  /* Mountains */
+  .mountains {
+    height: 12.2918rem;
+  }
+  .mountains > * {
+    width: 4000px;
+    height: 12.2918rem;
+  }
+  .shade-back-far {
+    bottom: 0rem;
+  }
+  .far-mountains {
+    bottom: 1rem;
+
+    --slideLeftStart: 0px;
+    --slideLeftDistance: -2000px;
+  }
+  .near-mountains {
+    bottom: -4rem;
+
+    --slideLeftStart: 0px;
+    --slideLeftDistance: -2000px;
+  }
+  .trees {
+    bottom: -2rem;
+
+    --slideLeftStart: 0px;
+    --slideLeftDistance: -2000px;
+  }
+  .shade-front {
+    bottom: -3rem;
+    height: 3rem;
+    -webkit-box-shadow: 0 0 5rem 3rem var(--bgShadeFrontBoxShadowClr);
+    box-shadow: 0 0 5rem 3rem var(--bgShadeFrontBoxShadowClr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+}

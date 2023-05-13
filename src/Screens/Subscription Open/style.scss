@@ -1,0 +1,49 @@
+.input-wrapper {
+  margin-bottom: 60px;
+  flex-direction: column;
+  height: 70px;
+}
+
+.input-form-mobile {
+  width: 80%;
+  height: auto !important;
+}
+
+.input-form-referal {
+  width: 65%;
+}
+
+.verify-btn {
+  margin: 0 !important;
+}
+
+.fs-20 {
+  font-size: var(--Font-20);
+}
+
+.pay-btn {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tax-text {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .amount-wrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+  .tax-text {
+    margin: 20px 0;
+  }
+  .fs-20 {
+    font-size: 16px;
+  }
+  .fs-55 {
+    font-size: 35px !important;
+  }
+}

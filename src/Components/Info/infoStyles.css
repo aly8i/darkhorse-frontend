@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+.info-wrapper{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:80px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.titlesection{
+    width: 100%;
+}
+
+.titletext{
+    margin-left: 100px;
+}
+
+.section1, .section2 ,.services,.product,.email{
+    width: 100%;
+}
+
+.section1text, .section2text{
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+.services{
+    margin-left: 400px;
+}
+.servicestitle{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style: circle;
+    margin-left: 70px;
+    margin-right: 200px;
+}
+
+.productstitle{
+    margin-left: 200px;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.productsbutton{
+    margin-left: 300px;
+    border: 1px solid white;
+    width:130px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.email{
+    border-top: 1px solid white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.emailtext{
+    margin-left: 100px;
+}
+
+#switch[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+  }
+  
+  #switchlabel {
+    position: relative;
+    top: -35px;
+    transform: scale(0.2);
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 200px;
+    height: 100px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  #switchlabel:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+  
+  #switch:checked + #switchlabel {
+    background: lightgreen;
+  }
+  
+  #switch:checked + #switchlabel:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  #switchlabel:active:after {
+    width: 130px;
+  }
+
+  @media only screen and (max-width: 684px){
+
+        .section1text, .section2text{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        .emailtext{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .titletext{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .services{
+            margin-left: 200px;
+            /* margin-right: 200px; */
+        }
+        .productsbutton{
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        .productstitle{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    }
+
+    @media only screen and (max-width: 430px){
+
+        .section1text, .section2text{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .emailtext{
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        .titletext{
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        .services{
+            margin-left: 100px;
+            /* margin-right: 200px; */
+        }
+        .productsbutton{
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .productstitle{
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }

@@ -1,0 +1,57 @@
+@import '../../styles/mixins/position';
+@import '../../styles/mixins/dimensions';
+
+.img-home-container img {
+  width: 100%;
+  height: 237.5px;
+}
+
+.card-home-content {
+  background-color: var(--Colour-2);
+  background-color: var(--Colour-1);
+  text-align: center;
+  padding: 60px 0 10px 0;
+  margin-top: -5px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode .card-home-content {
+  background-color: var(--Colour-1);
+  color: #000;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lock-pic {
+  position: absolute;
+}
+.card-btn {
+  background-color: var(--Colour-1);
+  color: var(--Colour-2);
+  width: 138px;
+  height: 50px;
+  border-radius: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: lowercase;
+  margin-top: 30px;
+}
+
+.card-home-text {
+  width: 50%;
+  margin: 0 auto;
+}
+.card-home-title {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .card-container {
+    width: 90%;
+  }
+}

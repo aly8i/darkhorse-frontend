@@ -1,0 +1,77 @@
+.sub-footer {
+  width: 87vw;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 12px;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+ 
+}
+.sub-footer {
+  ul {
+    width: 50%;
+    list-style: none;
+    justify-content: space-between;
+  }
+}
+.footer-list {
+  color: #838282;
+}
+.footer-text{
+  font-size: 70px;
+  font-family: "Averta CY";
+  font-weight: 500;
+  line-height: 75px;
+  font-size: 70px !important;
+  font-weight: 600 !important;
+  @media only screen and (max-width:1400px) {
+    line-height: 60px;
+    font-size: 60px !important;
+    
+   }
+   @media only screen and (max-width:993px) {
+    font-size: 40px !important;
+    line-height: 42px !important;
+    
+   }
+
+span{
+  display:block;
+}
+@media only screen and (max-width:1200px) {
+ margin-bottom: 15px !important;
+ 
+}
+
+
+}
+
+
+
+
+
+.sub-footer ul li {
+
+@media only screen and (max-width:600px) {
+ margin-bottom: 10px !important;
+ 
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

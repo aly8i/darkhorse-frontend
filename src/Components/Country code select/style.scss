@@ -1,0 +1,33 @@
+select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(187, 187, 187, 1);
+  outline: none;
+  width: 17%;
+  color: #c4c4c4;
+  font-size: 55px;
+  margin-right: 1.2rem;
+  padding: 2px 0;
+}
+
+optgroup {
+  font-size: 30px !important;
+  color: var(--Colour-2);
+}
+
+option {
+  width: 70px;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 900px) {
+  select {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  select {
+    font-size: 16px;
+  }
+}

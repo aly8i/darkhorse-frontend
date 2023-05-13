@@ -1,0 +1,192 @@
+.light-mode .btn-component {
+  background-color: transparent;
+  height: 52px;
+  border: 0.8px solid rgba(0, 0, 0, 0.687);
+  border-radius: 34px;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  width: 180px;
+  height: 60px;
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+.light-mode .btn2-component {
+  background-color: transparent;
+  height: 52px;
+  border: 0.8px solid rgba(0, 0, 0, 0.687);
+
+  border-radius: 50%;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  text-align: center;
+  
+}
+.dark-mode .btn2-component {
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+  height: 52px;
+  border: 0.8px solid #e1e1e1;
+  border-radius: 100px;
+  color: var(--Colour-1);
+  font-size: 20px;
+  text-align: center;
+  line-height: 0px;
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+}
+.dark-mode .btn-component {
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+  height: 52px;
+  border: 0.8px solid #e1e1e1;
+  border-radius: 100px;
+  color: var(--Colour-1);
+  font-size: 20px;
+  text-align: center;
+  line-height: 0px;
+  width: 180px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+/* btn-animate animation styles */
+.btn-animate {
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  border-radius: 100px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn-animate__filler {
+  display: inline-block;
+  position: absolute;
+  top: -50%;
+  left: -25%;
+  width: 150%;
+  height: 200%;
+  border-radius: 50%;
+  transform: translateY(-75%);
+  z-index: 1;
+}
+.light-mode .btn-animate__filler {
+  background-color: black;
+}
+.dark-mode .btn-animate__filler {
+  background-color: white;
+}
+.btn-animate__text {
+  position: relative;
+  transition: color 350ms linear;
+  z-index: 5;
+}
+.dark-mode{
+  .btn-animate__text{
+    color: #fff !important;
+  }
+  .magnetic-area:hover ~button .btn-animate__text{
+    color: #000 !important;
+  }
+  .whatsAppBtn,.subscribeBtn {
+    border: 1px solid #fff !important;
+  //  height: 60px !important;
+  //  width: 220px !important;
+  //  font-size: 30px !important;
+  }
+}
+
+.light-mode .btn-animate.active {
+  color: white;
+}
+.dark-mode .btn-animate.active {
+  color: black;
+}
+
+.btn-animate.active .btn-animate__filler {
+  animation: btnHover 350ms ease-in forwards;
+}
+.btn-animate.not-active .btn-animate__filler {
+  animation: btnLeave 350ms ease-in forwards;
+}
+
+@keyframes btnHover {
+  from {
+    transform: translateY(-75%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes btnLeave {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(75%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .dark-mode .btn-component,
+  .light-mode .btn-component {
+    width: 140px;
+    height: 49px;
+  }
+  .pricing-list {
+    margin-left: 15px;
+  }
+}
+.subscribeBtn{
+  /*
+  margin-top: 0 !important;
+  border: 1px solid #000 !important;
+  font-family: "Averta CY" !important;
+  font-weight: 600 !important;
+  width: 150px !important;
+  height: 50px !important;
+  */
+}
+.whatsAppBtn{
+  /*
+  margin-top: 0 !important;
+  border: 1px solid #000 !important;
+  font-family: "Averta CY" !important;
+  font-weight: 600 !important;
+  width: 160px !important;
+  height: 46px !important;
+  */
+}
+
+//Suggesting one fundamentally Strong / Unique / Amazing / Smallcap / Microcap  Company every week
+@media only screen and (max-width: 900px){
+  .btn2-component{
+    scale: 0.9;
+  }
+}
+
+
+@media only screen and (max-width: 600px){
+  .btn2-component{
+    scale: 0.8;
+  }
+}
+
+@media only screen and (max-width: 430px){
+  .btn2-component{
+    scale: 0.7;
+  }
+}
+

@@ -1,0 +1,1102 @@
+// @use './mixins/_flex.scss';
+@import './variables/colors';
+@import './variables/typography';
+@import './variables/margin';
+@import './mixins/flex';
+@import './mixins/fonts';
+@import './mixins/dimensions';
+@import './mixins/typography-mixin';
+@import './mixins/position';
+@import './mixins/spacing';
+h1, h2, h3, h4, h5, h6{
+  color: #000 !important;
+}
+:root {
+  --Colour-1: $color-white;
+  --Colour-2: $color-black;
+  --Colour-3: $color-gray;
+  --Colour-4: $color-light-gray;
+  --Colour-5: $color-red;
+  --Colour-6: $color-green;
+  --Colour-7: $color-purple;
+  --Colour-8: $color-dark-purple;
+  --Colour-9: $color-light-green;
+  --Heading-95: $heading-95;
+  --Heading-75: $heading-75;
+  --Font-55: $font-55;
+  --Font-50: $font-50;
+
+  --Font-45: $font-45;
+  --Font-35: $font-35;
+  --Font-30: $font-30;
+  --Font-20: $font-20;
+  --Font-15: $font-15;
+  --Margin-sections: $margin-sections;
+  --Margin-headers: $margin-headers;
+}
+
+@font-face {
+  font-family: AvertaBold;
+  src: url(../Assets//Font/Averta-Bold.otf);
+}
+
+@font-face {
+  font-family: Averta;
+  src: url(../Assets//Font/AvertaCY-Light.otf);
+}
+
+@font-face {
+  font-family: AvertaSemi;
+  src: url(../Assets/Font/AvertaCY-Semibold.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: AvertaSemiBold;
+  src: url(../Assets/Font/AvertaDemoPE-ExtraBold.otf);
+}
+@font-face {
+  font-family: AvertaReg;
+  src: url(../Assets/Font/AvertaDemoPE-Regular.ttf);
+}
+
+
+
+@font-face {
+  font-family: "Averta CY";
+  src: url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Light.woff2) format("woff2"),
+   url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Light.woff) format("woff"),
+    url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta CY";
+  src: url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Regular.woff2) format("woff2"),
+   url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Regular.woff) format("woff"),
+      url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta CY";
+  src: url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Semibold.woff2) format("woff2"),
+   url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Semibold.woff) format("woff"),
+      url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Semibold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta CY";
+  src: url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Bold.woff2) format("woff2"),
+   url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Bold.woff) format("woff"), url(//cdn.cuberto.com/cb/fonts/averta/AvertaCY-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} 
+.font-Averta{
+  font-family: "Averta CY";
+}
+.size-28{
+  font-size: 28px;
+}
+.mb-10{
+  margin-bottom: 100px !important;
+}
+@for $i from 1 through 100 {
+  .size-#{$i}{
+    font-size: #{$i}px !important;
+  }
+}
+@for $i from 1 through 10 {
+  .w-#{$i*100}{
+    font-weight: #{$i*100} !important;
+  }
+}
+.size-85{
+  @media only screen and (max-width: 1024px) {
+    font-size: 60px !important;
+   }
+   @media only screen and (max-width: 600px) {
+    font-size: 35px !important;
+   }
+}
+.size-28{
+  @media only screen and (max-width: 600px) {
+    font-size: 20px !important;
+    line-height: 23px !important;
+   }
+}
+body{
+  line-height: normal !important;
+  font-family: "Averta CY" !important;
+  
+}
+p,h1,h2,h3,h4,h5,h6,span{
+  font-family: "Averta CY" !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ // font-family: Averta;
+}
+.grey{
+  color: $color-gray
+}
+
+.light-font {
+  @include light-font;
+}
+
+.semi-font {
+  @include semi-font;
+}
+
+.bold-font {
+  @include bold-font;
+}
+body {
+  margin: 0;
+  font-family: Averta;
+  line-height: 1.6;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+ // @include container;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (max-width:992px) {
+    width: 85%;
+   }
+   &.philosopycontainer{
+    @media only screen and (max-width:600px) {
+      width: 100%;
+     }
+     >div{
+      @media only screen and (max-width:600px) {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+       }
+     }
+   }
+}
+
+.text-center {
+  @include text-center();
+}
+
+.underline {
+  @include underline();
+}
+
+.strong {
+  @include strong();
+}
+
+.mt-section {
+  //@include mt-section();
+  @media only screen and (max-width: 1440px) {
+    //  padding-left: 80px !important;
+      margin-top: 180px;
+      margin-bottom: 180px;
+    }
+    @media only screen and (max-width: 1024px) {
+      //  padding-left: 80px !important;
+        margin-top: 90px;
+        margin-bottom: 90px;
+      }
+      @media only screen and (max-width: 992px) {
+        //  padding-left: 80px !important;
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+        @media only screen and (max-width: 768px) {
+          //  padding-left: 80px !important;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+}
+
+.mt-header.main-header-home {
+  @include mt-header;
+  font-weight: 600 !important;
+  font-size: 85px !important;
+  .text-slide-up-animation-text-1{
+    
+  }
+  //padding-left: 300px !important;
+  margin: 120px 0 300px 0;
+ 
+  @media only screen and (max-width: 1440px) {
+  //  padding-left: 100px !important;
+  }
+  @media only screen and (max-width: 1200px) {
+    font-size: 100px !important;
+    margin-bottom: 80px;
+  }
+  @media only screen and (max-width: 1024px) {
+   // padding-left: 90px !important;
+   width: 700px;
+   max-width: 100%;
+   font-weight: 600;
+   margin-bottom: 50px;
+  }
+  @media only screen and (max-width: 992px) {
+  //  padding-left: 80px !important;
+    font-size: 85px !important;
+    
+    padding-left: 0 !important;
+  }
+  @media only screen and (max-width: 769px) {
+   // padding-left: 70px !important;
+  }
+  @media only screen and (max-width: 768px) {
+    
+    font-size: 60px !important;
+  }
+  @media only screen and (max-width: 600px) {
+  //  padding-left: 30px !important;
+  }
+
+  
+
+  @media only screen and (max-width: 500px) {
+    font-size: 54px !important;
+    
+  }
+  @media only screen and (max-width: 476px) {
+    font-size: 48px !important;
+    
+  }
+  @media only screen and (max-width: 425px) {
+    font-size: 42px !important;
+    margin-bottom: 100px;
+  }
+  
+
+
+
+
+}
+
+.fs-95 {
+  @include fs-95;
+}
+.fs-85 {
+  @include fs-85;
+}
+
+.fs-55 {
+  @include fs-55();
+}
+
+.fs-30 {
+  @include fs-30();
+}
+
+.fs-45 {
+  @include fs-45();
+}
+
+.fs-75 {
+  @include fs-75();
+}
+.fs-25 {
+  @include fs-25();
+}
+.w-80 {
+  @include w-80();
+}
+
+.w-70 {
+  @include w-70();
+}
+
+.h-100 {
+  @include h-100();
+}
+
+.gray-color {
+  color: var(--Colour-3);
+}
+
+.fw-semibold {
+  @include fw-semibold();
+}
+
+.slider-arrow {
+  @include slider-arrow;
+}
+
+.slider-arrow-left {
+  margin-right: 11px;
+  cursor: pointer;
+}
+
+.slider-arrow-right {
+  @include slider-arrow-right;
+}
+
+.stroked {
+  @include stroked;
+}
+
+.overview-content {
+  @include overview-content();
+  width: 80%;
+}
+
+.mt-1 {
+  @include mt-1();
+}
+.my-1 {
+  @include my-1();
+}
+
+.mt-6 {
+  @include mt-6();
+}
+
+.d-Flex {
+  @include d-flex;
+}
+
+.flex-column {
+  @include flex-column;
+}
+
+.flex-wrap {
+  @include flex-wrap;
+}
+
+.flex-direction-column {
+  @include flex-direction-column;
+}
+
+.justify-content-between {
+  @include justify-content-between;
+}
+
+.justify-content-center {
+  @include justify-content-center;
+}
+
+.align-items-center {
+  @include align-items-end;
+}
+
+.align-items-end {
+  @include align-items-end;
+}
+
+.my-4 {
+  @include my-4();
+}
+
+.fw-bold {
+  @include fw-bold();
+}
+
+.w-100 {
+  @include w-100();
+}
+
+.AccordionSummary {
+  @include accordion-summary();
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  color: var(--color-text);
+}
+
+.link::before,
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.link::before {
+  content: '';
+}
+
+.link--metis {
+  font-family: bely-display, sans-serif;
+  text-transform: lowercase;
+}
+
+.link--metis::before {
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+.w-50 {
+  @include w-50();
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.1;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.link--metis {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+ul li:hover .cursor {
+  transform: scale(6);
+}
+
+.slick-slider {
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .outlined {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  }
+
+  .dark-mode .stroked {
+    color: white;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .dark-mode .outlined {
+    color: #000;
+    text-shadow: -1px -1px 0 #fff, 0 -1px 0 #fff, 1px -1px 0 #fff, 1px 0 0 #fff, 1px 1px 0 #fff, 0 1px 0 #fff, -1px 1px 0 #fff, -1px 0 0 #fff;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .fs-95 {
+    font-size: 60px !important;
+    line-height: 60px !important;
+  }
+
+  .fs-75 {
+    font-size: 50px;
+  }
+
+  .flex-column-tablet {
+    flex-direction: column;
+  }
+
+  .fs-75 {
+    font-size: 50px;
+  }
+
+  .w-70 {
+    width: 100% !important;
+  }
+
+  .overview-content {
+    width: 100%;
+  }
+
+  .fs-45 {
+    font-size: 21px;
+    line-height: 45px;
+  }
+  .css-o4b71y-MuiAccordionSummary-content {
+    margin: 30px 0 !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-whatsapp {
+    margin-top: 30px;
+  }
+
+  .fs-45 {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .fs-95 {
+    font-size: 40px !important;
+    line-height: 45px !important;
+  }
+
+  .fs-30 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .fs-75 {
+    font-size: 24px !important;
+  }
+
+  .accordion-text {
+    font-size: 20px !important;
+  }
+
+  .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+    padding: 0 !important;
+  }
+
+  .icon-mobile {
+    font-size: 20px !important;
+  }
+  .css-o4b71y-MuiAccordionSummary-content {
+    margin: 20px 0 !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .fs-45 {
+    font-size: 25px;
+    line-height: 20px;
+  }
+  .fs-95 {
+    font-size: 30px !important;
+    line-height: 35px !important;
+  }
+
+  .filter-item:nth-child(2) {
+    margin: 20px 0;
+  }
+
+  .card-title {
+    font-size: 20px !important;
+  }
+
+  .flex-column-mobile {
+    flex-direction: column;
+  }
+  .css-yw020d-MuiAccordionSummary-expandIconWrapper.Mui-expanded,
+  .css-yw020d-MuiAccordionSummary-expandIconWrapper {
+    width: 25px !important;
+  }
+}
+
+.slick-prev.slick-disabled:before {
+  display: none;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  margin: 0 auto !important;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  background-color: transparent !important;
+}
+
+.dark-mode .css-i4bv87-MuiSvgIcon-root {
+  color: rgba(131, 130, 130, 1);
+}
+
+.light-mode .css-i4bv87-MuiSvgIcon-root {
+  color: var(--Colour-2);
+}
+
+.Accordion-wrapper {
+  @include Accordion-wrapper;
+  width: 100% !important;
+  
+}
+
+.hero-img-container {
+  @include hero-img-container;
+}
+
+.hero-img {
+  @include w-100;
+}
+
+/* slider */
+
+.slick-next,
+.slick-prev {
+  top: 100%;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+.dark-mode .slick-dots li button:before {
+  color: var(--Colour-1);
+}
+
+.slick-next {
+  display: none !important;
+}
+
+/* pricing page  */
+.pricing-list {
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.pricing-list p {
+  color: #787878;
+  margin: 0 !important;
+}
+rect[Attributes] {
+  display: none !important;
+}
+
+.w-35 {
+  width: 30%;
+}
+::placeholder {
+  color: #c4c4c4 !important;
+}
+
+.ant-image {
+  @include w-100;
+}
+
+.dark-mode h1 {
+  color: var(--Colour-1) !important;
+}
+.dark-mode h2 {
+  color: var(--Colour-1) !important;
+}
+.dark-mode h3 {
+  color: var(--Colour-1) !important;
+}
+.dark-mode h4 {
+  color: var(--Colour-1) !important;
+}
+.dark-mode h5 {
+  color: var(--Colour-1) !important;
+}
+.dark-mode h6 {
+  color: var(--Colour-1) !important;
+}
+
+.expanded-icon {
+  transform: rotate(180deg);
+}
+
+.dark-icon {
+  color: var(--Colour-1);
+  fill: currentColor;
+  display: inline-block;
+}
+
+.light-icon {
+  color: var(--Colour-2);
+  fill: currentColor;
+  display: inline-block;
+}
+
+.expanded-icon-dark {
+  color: var(--Colour-1);
+  fill: currentColor;
+  display: inline-block;
+}
+
+.svg-icon {
+  width: 37px;
+  height: 31px;
+}
+
+.css-67l5gl.Mui-expanded {
+  margin: auto !important;
+}
+
+.w-70 {
+  @include w-70;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.text-red {
+  @include text-red;
+}
+
+.text-green {
+  @include text-green;
+}
+
+/* Three images in 1 row */
+.w-33 {
+  width: 33%;
+}
+
+h2 {
+  margin-bottom: 0 !important;
+}
+
+.price-animation {
+  display: flex !important;
+  flex-direction: row !important;
+  margin-left: -10px !important;
+}
+
+.skeleton-card {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.css-o4b71y-MuiAccordionSummary-content {
+  margin: 30px 0 !important;
+  @media only screen and (max-width: 1024px) {
+    margin: 20px 0 !important;
+   }
+   @media only screen and (max-width: 600px) {
+    margin: 0px 0 !important;
+   }
+}
+
+.w-99 {
+  width: 90%;
+}
+
+.m-auto {
+  @include m-auto;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+.MuiCollapse-wrapper.MuiCollapse-vertical{
+
+  width: 100% !important;
+}
+
+.MuiAccordionDetails-root.AccordionDetails {
+  width: 100% !important;
+  margin: auto !important;
+  .accordion-card{
+    >div{
+      flex-wrap: wrap;
+      @media only screen and (max-width: 600px) {
+       flex-direction: row;
+    }
+    p,h6{
+      @media only screen and (max-width: 768px) {
+       margin-bottom: 0 !important;
+    }
+    }
+
+      >div.w-35{
+      
+
+    @media only screen and (max-width: 768px) {
+       width: 50% !important;
+   }
+        &:nth-child(1){
+          width: 25% !important;
+          
+          @media only screen and (max-width: 768px) {
+            width: 50% !important;
+            align-items: flex-start;
+        }
+
+        }
+        &:nth-child(2){
+          width: 50% !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+    @media only screen and (max-width: 768px) {
+      width: 50% !important;
+      align-items: flex-end;
+  }
+          
+        }
+        &:nth-child(3){
+          width: 25% !important;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          
+    @media only screen and (max-width: 768px) {
+      width: 50% !important;
+      align-items: flex-start;
+  }
+          h6{
+          
+          }
+          
+        }
+        &:nth-child(4){
+          width: 25% !important;
+          @media only screen and (max-width: 768px) {
+            width: 50% !important;
+            align-items: flex-end;
+            display: flex;
+            flex-direction: column;
+        }
+
+        }
+        &:nth-child(5){
+          width: 50% !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+    @media only screen and (max-width: 768px) {
+      width: 50% !important;
+      align-items: flex-start;
+  }
+          h6{
+           
+          }
+          
+        }
+        &:nth-child(6){
+          width: 25% !important;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          
+    @media only screen and (max-width: 768px) {
+      width: 50% !important;
+  }
+          h6{
+          
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+.admin-inputs {
+  @include admin-inputs;
+}
+.table-btn {
+  padding: 10px 20px;
+  width: 100px;
+  display: flex;
+  margin-top: 10px;
+  background: var(--Colour-2);
+  color: var(--Colour-1);
+}
+.justify-content-end {
+  justify-content: end;
+}
+.text-capitalize {
+  text-transform: lowercase !important;
+}
+.text-capitalize:first-line {
+  text-transform: capitalize !important;
+}
+
+
+/*Hide Scrolling */
+.scrollbar-track-x{
+display: none !important;
+}
+.mf-cursor.-menu::before{
+  @media only screen and (max-width: 600px) {
+    transform: scale(1.25) !important;
+  }
+}
+
+//Header h1
+h1.mt-header{
+  
+  font-weight: 700;
+  //padding-left: 100px;
+  padding-top: 250px;
+  padding-bottom: 300px;
+  font-size: 90px;
+  @media only screen and (max-width: 1024px) {
+   font-size: 70px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 35px;
+    padding-top: 150px;
+    padding-bottom: 200px;
+   }
+   &.Philosophy{
+    line-height: 80px;
+    @media only screen and (max-width: 600px) {
+   line-height: 40px;
+   padding-bottom: 100px;
+   max-width: 300px;
+     }
+   }
+   &.categoreypage{
+   max-width: 600px;
+   line-height: 80px;
+   @media only screen and (max-width: 1024px) {
+    max-width: 400px;
+    line-height: 70px;
+      }
+      @media only screen and (max-width: 600px) {
+        max-width: 300px;
+        line-height: 40px;
+          }
+
+   }
+   &.faqpagee{
+    max-width: 700px;
+    line-height: 90px;
+    @media only screen and (max-width: 600px) {
+     
+      line-height: 40px;
+      max-width: 300px;
+      padding-bottom: 80px;
+        }
+
+   }
+
+  
+}
+.sub-header-title{
+  
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 90px;
+  @media only screen and (max-width: 1024px) {
+    font-size: 70px;
+   }
+   @media only screen and (max-width: 600px) {
+    font-size: 35px;
+   }
+   &.subscribePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 80px !important;
+    @media only screen and (max-width: 600px) {
+      line-height: 40px !important;
+     }
+    
+    
+   }
+
+}
+.price-per-year{
+ 
+}
+.join-us-footer{
+  span{
+    display: block;
+  }
+}
+.no-spam-txt{
+  color: #787878;
+  font-weight: 300 !important;
+}
+
+.end-section-common{
+  padding: 120px 0;
+  margin-top: 100px;
+  h2.fs-95{
+    font-weight: 600 !important;
+  }
+  @media only screen and (max-width:768px) {
+   width: 85%;
+    
+  }
+  h2{
+    padding: 40px 0;
+  }
+  p{
+    font-size: 28px !important;
+    line-height: 32px !important;
+    font-weight: 300;
+    max-width: 850px;
+
+    @media only screen and (max-width:768px) {
+      font-size: 22px !important;
+      line-height: 26px !important;
+      font-weight: 300;
+
+      
+    }
+  
+  }
+}
+
+.faqtxt{
+  >span{
+      &:last-child{
+          font-weight: 700;
+      }
+  }
+}
+.faqOverview{
+  margin-bottom: 250px;
+}
+.faqAccordion{
+  margin-bottom: 250px;
+  @media only screen and (max-width: 600px) {
+     
+   margin-bottom: 100px;
+      }
+  .accordion-card {
+    font-weight: 300 !important;
+    font-family: "Averta CY" !important;
+    font-size: 28px !important;
+    @media only screen and (max-width: 600px) {
+     font-size: 20px !important;
+     line-height: 23px;
+        }
+  }
+  .AccordionDetails {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  
+  }
+  .css-o4b71y-MuiAccordionSummary-content{
+    margin-bottom: 10px !important;
+  }
+  .viewmorefaq{
+    margin-bottom: 200px;
+  }
+}
+
+.overview-wrapper.faq-warapper {
+margin: 100px 0 !important;
+}
+
+
+.according-headings{
+  @media only screen and (max-width: 600px) {
+     
+    width: 90%;
+       }
+}

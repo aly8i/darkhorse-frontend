@@ -1,0 +1,41 @@
+.accordion-card{
+    width: 100%;
+    margin: 0;
+}
+.accordion-card h6{
+   font-size: 28px;
+   margin: 40px 0 10px 0;
+   
+   font-weight:600;
+   font-family: "Averta CY" !important;
+
+}
+.accordion-card p{
+    font-size: 25px;
+    font-weight:300;
+    font-family: "Averta CY" !important;
+ }
+
+ 
+ @media only screen and (max-width:900px) {
+    .accordion-card h6{
+        font-size: 20px;
+        /* margin: 40px 0 15px 0; */
+        font-weight: bold;
+     }
+     .accordion-card p{
+        font-size: 20px;
+     }
+}
+ @media only screen and (max-width: 600px) {
+    .f-direction{
+        flex-direction: column;
+    }
+    .w-35{
+      width: 100%;
+    }
+
+    .accordion-card h6{
+        /* margin: 40px 0 5px 0; */
+     }
+}

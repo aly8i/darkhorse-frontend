@@ -1,0 +1,49 @@
+@mixin m-auto {
+  margin: auto;
+}
+@mixin my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@mixin mt-section {
+  margin: 400px auto;
+}
+
+@mixin mt-header {
+  margin: 120px 0 350px 0;
+}
+@mixin mt-1 {
+  margin-top: 1em;
+}
+@mixin my-1 {
+  margin: 1em 0;
+}
+@mixin mt-2 {
+  margin-top: 2em;
+}
+
+@mixin mt-6 {
+  margin-top: 6em;
+}
+
+@mixin my-4 {
+  margin: 15px 0;
+}
+
+@mixin mt-3 {
+  margin-top: 3em;
+}
+
+@mixin mb-3 {
+  margin-bottom: 1em;
+}
+@mixin mb-30 {
+  margin-bottom: 30px;
+}
+@mixin mb-50 {
+  margin-bottom: 50px;
+}
+
+@mixin mt-30 {
+  margin-top: 30px;
+}

@@ -1,0 +1,28 @@
+.mt-filter {
+  margin: 200px auto;
+}
+.filter-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #787878;
+}
+
+.filter-item {
+  font-size: var(--Font-50);
+}
+.active {
+  border: none;
+}
+.filter-item:nth-child(2) {
+  margin: 0 30px;
+}
+
+@media only screen and (max-width: 900px) {
+}
+
+@media only screen and (max-width: 600px) {
+  .filter-item {
+    font-size: var(--Font-20);
+    border-bottom: 1px solid;
+  }
+}

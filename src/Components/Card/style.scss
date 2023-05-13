@@ -1,0 +1,267 @@
+@import '../../styles/mixins/flex';
+@import '../../styles/mixins/spacing';
+
+.d-flex {
+  @include d-flex;
+}
+.align-items-center {
+  @include align-items-center;
+}
+.my-0 {
+  @include my-0;
+}
+.card-container {
+  width: 95%;
+  cursor: pointer;
+  margin: 50px auto;
+  @media only screen and (max-width:500px) {
+   
+      margin: 30px auto;
+    }
+}
+.img-container {
+  img {
+    width: 100%;
+    height: 237.5px;
+    transform: scale(1.02);
+  }
+}
+
+.card-title {
+  font-size: 28px;
+  
+  margin-top: 0px;
+  //font-family: AvertaSemi;
+  h2{
+    font-family: "Averta CY" !important;
+    font-weight: 600 !important;
+  }
+
+}
+.card-title {
+  h3 {
+    text-overflow: ellipsis;
+    font-family: AvertaSemi;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Averta CY";
+    color:#000;
+    @media only screen and (max-width: 1200px) {
+      //  padding-left: 80px !important;
+        font-size: 24px;
+      }
+      &~div{
+        @media only screen and (max-width: 1200px) {
+          //  padding-left: 80px !important;
+            font-size: 24px;
+          } 
+      }
+  }
+}
+.section-img-container{
+  width: 550px;
+  height: 400px;
+  margin: 0;
+}
+
+.card-title p {
+  color: rgba(221, 88, 88, 1);
+}
+.card-rate {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 23px;
+  margin-top: 10px;
+  font-family: "Averta CY";
+  font-weight: 300;
+  *{
+    font-family: "Averta CY" !important;
+    font-weight: 300 !important;
+  }
+  .today{
+    margin-bottom: 0;
+    text-transform: lowercase;
+    margin-left: 5px;
+    color: #636363;
+    letter-spacing: 1px;
+    &::first-letter{
+      text-transform: capitalize;
+    }
+  }
+  .inr{
+       letter-spacing: 2px;
+  }
+  
+}
+.card-rate span {
+ // color: #888;
+  text-transform: capitalize;
+}
+
+.card-text {
+  font-size: 20px;
+
+ 
+  
+  
+  margin: 30px 0 15px 0;
+  color: #5F5F5F;
+  font-family: "Averta CY" !important;
+  font-weight: 300 !important;
+  letter-spacing: .25px;
+  @media only screen and (max-width:1200px) {
+    //  padding-left: 80px !important;
+      font-size: 17px;
+    }
+    @media only screen and (max-width:992px) {
+      //  padding-left: 80px !important;
+       margin-top: 15px;
+      }
+}
+
+.dark-mode .card-text {
+  color: #c4c4c4;
+}
+
+.light-mode .card-text {
+  color: #5f5f5f;
+}
+.card-img-container{
+  margin-bottom: 350px;
+}
+.card-date {
+  font-size: 19px;
+  text-transform: lowercase;
+  
+  margin: 0;
+  letter-spacing: .25px;
+ 
+  font-weight: 600 !important;
+  color: #000;
+  font-family: "Averta CY";
+  @media only screen and (max-width: 1024px) {
+    //  padding-left: 80px !important;
+      font-size: 16px;
+    }
+
+  >p{
+    &::first-letter{
+      text-transform: capitalize;
+    }
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.price-wrapper {
+}
+
+.light-mode .horizontal-card {
+  display: flex;
+align-items: center;
+background-color: #fff;
+margin-left: 7%;
+border-radius: 10px;
+margin-bottom: 20px;
+
+}
+.dark-mode .horizontal-card {
+  display: flex;
+align-items: center;
+background-color: #000;
+margin-left: 7%;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .price-wrapper {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    width: 100%;
+  }
+  .card-rate {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.searchcard-container {
+  width: 100%;
+  max-width: 28rem;
+  cursor: pointer;
+  margin: 50px auto;
+}
+
+.searchcard-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+.h-card-img{
+  width: 20%;
+height: 10rem;
+margin-right: 20px;
+}
+
+.h-card-heading{
+  font-size: 2rem;
+font-weight: bold;
+margin-bottom: 10px;
+text-transform: none;
+}
+
+.h-card-subheadings{
+  font-size: 1rem;
+font-weight: 500;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+
+}
+
+.mob-card{
+  display: none;
+}
+
+.card-hr{
+  height: 1px;
+  width: 88%;
+  margin-left: 6.5%;
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+  .horizontal-card-container {
+    display: none !important;
+  }
+  .mob-card{
+    display: block;
+    margin-left: 7%;
+    margin-bottom: 5%;   
+    margin-right: 3%;
+
+  }
+  .h-card-subheadings{
+    box-shadow: 0px -6px 17px -17px #111; 
+  }
+  .mob-card-hr{
+    height: 1px;
+    width: 100%;
+    margin-right: 3%;
+  }
+}
